@@ -1,0 +1,101 @@
+/*
+# ID 
+. Class
+*/
+#plydheader 
+{
+	top: 0; 
+	z-index: 50000; 
+	position: fixed; 
+	width: 100%; 
+	height: 55px;
+}
+
+#plydlogo {
+	border: 2px #7F8984; 
+	border-radius: 40px; 
+	font-family: Lato-Black; 
+	font-size: 24px; 
+	background-color: #F2E682; 
+	opacity: 1;
+}
+
+.plydheadercolor {
+	float: right; 
+	color: #7F8984;
+}
+
+#plydheaderfont {
+	font-family: Lato-Regular; 
+	color: #FFFFFF;
+	background-color: #7F8984;
+}
+
+.plydcontent{
+	max-width:1600px;
+	max-height: 800px;
+
+}
+
+.plydblue{
+	background-color: #162C49;
+}
+
+.plydcontenttitle{
+	font-family: Raleway-Black; 
+	color: white; 
+	padding-right: 100px;
+}
+
+.plydcontentisi{
+	text-align: justify; 
+	font-family: Lato-Regular; 
+	color: white; 
+	padding-right: 100px;
+}
+
+.plydgalleryjudul{
+	font-family: Raleway-Black;
+}
+
+.plydcontactjudul{
+	font-family: Lato-Black;
+	color: white; 
+	text-align: center; 
+	font-size: 50px; 
+	color: white;
+}
+
+.plydcontactp {
+	font-family: Lato-Regular; 
+	font-size: 20px;
+	text-align: center; 
+	color: white
+}
+
+.plydcontactisi{
+	font-family: Raleway-Medium; 
+	font-size: 18px;
+	text-align: center; 
+	color: white
+}
+
+.plydsendcontact{
+	color: white; 
+	font-family: Raleway-Medium; 
+	text-align: center;
+}
+
+.plydfooter{
+	background-color: #2e2e2e
+}
+
+.plydh5{
+	color: white; 
+	text-align: left;
+}
+
+.plydpadbot{
+	padding-bottom: 8px;
+}
+
