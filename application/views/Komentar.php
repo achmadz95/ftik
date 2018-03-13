@@ -36,7 +36,7 @@ th, td {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html" style="font-family: Lato-Black; font-size: 28px;">P O L A L O Y D</a>
+                <a class="navbar-brand" href="index.html" style="font-family: Lato-Black; font-size: 28px;">FTIK - ITS</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
