@@ -94,7 +94,9 @@ class My_Controller extends CI_Controller {
 	    	}
     	
             }else{
-                echo "<script> alert('Username atau Password yang anda masukkan salah!') </script>";
+                // echo "<script> alert('Username atau Password yang anda masukkan salah!') </script>";
+                $message = "Username atau Password yang anda masukkan salah!";
+                echo "<script type='text/javascript'>alert('$message');window.location.href='".site_url('login')."';</script>";
 	  	$this->load->view('Login');
 		}
 	}

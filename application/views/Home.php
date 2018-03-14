@@ -134,6 +134,7 @@ text-transform: none;
             	<li><a href="#visimisi" class="w3-bar-item w3-button" id="plydheaderfont">Visi & Misi</a> </li>
             	<li><a href="#mengapaTI" class="w3-bar-item w3-button"  id="plydheaderfont">Mengapa Teknologi Informasi</a></li>
             	<li><a href="#fasilitas" class="w3-bar-item w3-button"  id="plydheaderfont">Fasilitas</a></li>
+            	<li><a href="login" class="w3-bar-item w3-button"  id="plydheaderfont">Login</a></li>
           	</ul>
         </div>
     </nav>                           
@@ -238,6 +239,7 @@ text-transform: none;
       </div>
     </div>
 </section>
+
 <!-- Footer -->
 	<div class="row feature_box" id="fasilitas">				
 		<div class="span4 center"><h1><b>FASILITAS</h1></b><br>
