@@ -1,3 +1,12 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+if ( ! function_exists('asset_url()')) {
+    function asset_url()
+   {
+    return base_url().'assets/';
+   }
+ }
+ ?>
 <!DOCTYPE html>
 <html >
 <head>
@@ -24,7 +33,7 @@
 <!-- template portfolio / gallery -->
 <link href="<?php echo base_url()?>assets/gallery/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url()?>assets/gallery/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="<?php echo base_url()?>assets/gallery/css/agency.min.css" rel="stylesheet">
+<!-- <link href="<?php echo base_url()?>assets/gallery/css/agency.min.css" rel="stylesheet"> -->
 
 <!-- scripts -->
 <script src=<?php echo base_url()."assets/themes/js/jquery-1.7.2.min.js";?>></script>
@@ -33,7 +42,7 @@
 <script src=<?php echo base_url()."assets/themes/js/jquery.scrolltotop.js";?>></script>
 
 <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
-
+<!-- <link href="<?php echo base_url()?>assets/style.css" rel="stylesheet"> -->
   
 </head>
   <body>

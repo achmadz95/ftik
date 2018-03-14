@@ -33,8 +33,8 @@ class My_Model extends CI_Model {
   }
 
   public function delete_item_komentar($item){
-    $this->db->where_in('ID_komentar', $item);
-    $this->db->delete('komentar');
+    $this->db->where_in('id_user', $item);
+    $this->db->delete('user');
   }
 
   public function getDataSlider() {

@@ -105,7 +105,7 @@ class My_Controller extends CI_Controller {
 	    //$this->load->view('Komentar', array('data' => $this->My_Model->getDataKomentar()));
 //            $data = $this->My_Model->getDataKomentar();
 //            $this->load->view('Komentar', array('data' => $data)); 
-            $data=$this->My_Model->getDataKomentar('komentar','','')->result_array();
+            $data=$this->My_Model->getDataKomentar('user','','')->result_array();
             $kirim['data']  = $data;
             $this->load->view('Komentar', $kirim);
   	}
@@ -132,9 +132,9 @@ class My_Controller extends CI_Controller {
     
         }
 
-  public function deletekomentar($ID){ //delete 1 komentar
-    $res = $this->My_Model->delete_item_komentar($ID);
-    redirect('My_Controller/readDataKomentar');}
+  	public function deletekomentar($ID){ //delete 1 komentar
+    	$res = $this->My_Model->delete_item_komentar($ID);
+    	redirect('My_Controller/readDataKomentar');}
   
 }
 ?>

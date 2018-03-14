@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>KOMENTAR</title>
+    <title>Data User</title>
     <link href="<?php echo base_url()?>assets/admin/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/admin/css/sb-admin.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- logo icon -->
+    <link rel="icon" href="<?php echo base_url(); ?>uploads/icon.jpg" type="image/jpg">
 
 </head>
 <style type="text/css">
@@ -54,7 +57,7 @@ th, td {
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="#"><i class="fa fa-lg fa-comments"> Pertanyaan User</i></a>
+                        <a href="#"><i class="fa fa-lg fa-comments"> User</i></a>
                     </li>
                 </ul>
             </div>
@@ -67,11 +70,11 @@ th, td {
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Pertanyaan User
+                            User
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <a href="#"><i class="fa fa-lg fa-comments">Pertanyaan User</i></a>
+                                <a href="#"><i class="fa fa-lg fa-comments"> Data User</i></a>
                             </li>
                            
                         </ol>
@@ -80,26 +83,26 @@ th, td {
 
                 <table align="center" style="width: 100%;">
                     <thead>
-                        <th style="padding-right: 20px;"></th>
                         <th style="text-align: center;">ID</th>  
                         <th style="text-align: center;">Nama</th>
                         <th style="text-align: center;">Email</th>
-                        <th style="text-align: center;">Nomor Telepon</th>
-                        <th style="text-align: center;">Pesan</th>
+                        <th style="text-align: center;">Username</th>
+                        <th style="text-align: center;">Deskripsi</th>
+                        <th style="padding-right: 20px;"></th>
                     </thead>
                     
                     <tbody style="text-align: center;">
                         <?php foreach ($data as $x) { ?>
                         <tr>
                         
-                        <td><?php echo $x['ID_komentar']; ?></td>
-                        <td><?php echo $x['Name']; ?></td>
-                        <td><?php echo $x['Email']; ?></td>
-                        <td><?php echo $x['No_Telp']; ?></td>
-                        <td><?php echo $x['Message']; ?></td>
+                        <td><?php echo $x['id_user']; ?></td>
+                        <td><?php echo $x['nama_user']; ?></td>
+                        <td><?php echo $x['email']; ?></td>
+                        <td><?php echo $x['username']; ?></td>
+                        <td><?php echo $x['deskripsi_user']; ?></td>
 
                         <td align="center">
-                            <a href="<?php echo base_url()."index.php/My_Controller/deletekomentar/".$x['ID_komentar']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
+                            <a href="<?php echo base_url()."My_Controller/deletekomentar/".$x['id_user']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
                         </td>
                         </tr>
                         <?php } ?>

@@ -1,7 +1,7 @@
   <!DOCTYPE html>
 <html>
 <head>
-<title>FTIK  </title>
+<title> FTIK </title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="<?php echo base_url()?>assets/polaloyd.css">
 
 <!-- global styles -->
-<link href=<?php echo base_url()."assets/themes/css/main.css" ; ?> rel="stylesheet">
+<link href=<?php echo base_url()."assets/themes/css/home.css" ; ?> rel="stylesheet">
 <link href=<?php echo base_url()."assets/themes/css/flexslider.css";?> rel="stylesheet">
 
 <!-- logo icon -->
@@ -134,7 +134,7 @@ text-transform: none;
             	<li><a href="#visimisi" class="w3-bar-item w3-button" id="plydheaderfont">Visi & Misi</a> </li>
             	<li><a href="#mengapaTI" class="w3-bar-item w3-button"  id="plydheaderfont">Mengapa Teknologi Informasi</a></li>
             	<li><a href="#fasilitas" class="w3-bar-item w3-button"  id="plydheaderfont">Fasilitas</a></li>
-            	<li><a href="login" class="w3-bar-item w3-button"  id="plydheaderfont">Login</a></li>
+            	<li><a href="login" class="w3-bar-item w3-button"  id="plydheaderfont">LOGIN</a></li>
           	</ul>
         </div>
     </nav>                           
