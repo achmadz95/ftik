@@ -4,7 +4,7 @@ class My_Model extends CI_Model {
   public function loginadmin($username, $sha1){  
     
     $this->db->select('*');
-    $this->db->from('admin');
+    $this->db->from('user');
     $this->db->where('username', $username);
     $this->db->where('password', $sha1);
     
