@@ -32,6 +32,18 @@ class My_Model extends CI_Model {
       return $this->db->get_where($tabel);
   }
 
+  public function edit_user($where,$table){    
+    return $this->db->get_where($table,$where);
+  }
+
+  public function UpdateUser($where,$data,$table){
+    $this->db->where($where);
+    $this->db->update($table,$data);
+  }
+  // public function UpdateUser($where,$table){    
+  //   return $this->db->get_where($table,$where);
+  // }
+
   public function delete_item_user($item){
     $this->db->where_in('id_user', $item);
     $this->db->delete('user');

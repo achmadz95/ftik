@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2018 at 04:57 AM
+-- Generation Time: Mar 16, 2018 at 10:17 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -21,20 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `ftik`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gallery`
---
-
-CREATE TABLE `gallery` (
-  `ID_gallery` int(11) NOT NULL,
-  `caption_gallery` varchar(200) NOT NULL,
-  `occasion_gallery` varchar(100) NOT NULL,
-  `gambar_gallery` varchar(100) NOT NULL,
-  `keterangan_gallery` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -87,12 +73,6 @@ INSERT INTO `user` (`id_user`, `nama_user`, `email`, `username`, `password`, `de
 --
 
 --
--- Indexes for table `gallery`
---
-ALTER TABLE `gallery`
-  ADD PRIMARY KEY (`ID_gallery`);
-
---
 -- Indexes for table `slider`
 --
 ALTER TABLE `slider`
@@ -107,12 +87,6 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `gallery`
---
-ALTER TABLE `gallery`
-  MODIFY `ID_gallery` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `slider`

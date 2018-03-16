@@ -27,12 +27,11 @@ class My_Controller extends CI_Controller {
 
 	public function index()
 	{
+		$id=$this->session->userdata('id_user');
 		$data['err_message'] = "";
 		$data['data1'] = $this->My_Model->getDataSlider(); //['data1'] sesuaikan sama view
-		$data['data2'] = $this->My_Model->getDataGallery();
-		// $data['data3'] = $this->My_Model->getDataTestimonials();
+		$data['data2'] = $this->My_Model->getDataUser('user','','')->result_array();
 		$this->load->view('Home', $data);
-
 	}
 
 	public function login()
@@ -88,49 +87,60 @@ class My_Controller extends CI_Controller {
 	    	$this->session->set_userdata('isLogin', TRUE);
 	    	if($_SESSION['isLogin']==true){
 	    		// $this->session->set_userdata('akses',TRUE);
+	    		$this->session->set_userdata('id_user',$data['id_user']);
+        		$this->session->set_userdata('nama_user',$data['nama_user']);
 		    	$this->session->set_userdata('username', $username);
+		    	$this->session->set_userdata('isAdmin',$data['isAdmin']);
 
 		    	redirect('My_Controller/user');
 	    	}
     	
-            }else{
-                // echo "<script> alert('Username atau Password yang anda masukkan salah!') </script>";
-                $message = "Username atau Password yang anda masukkan salah!";
-                echo "<script type='text/javascript'>alert('$message');window.location.href='".site_url('login')."';</script>";
-	  	$this->load->view('Login');
+        }else{
+            // echo "<script> alert('Username atau Password yang anda masukkan salah!') </script>";
+            $message = "Username atau Password yang anda masukkan salah!";
+            echo "<script type='text/javascript'>alert('$message');window.location.href='".site_url('login')."';</script>";
+	  	
+	  		$this->load->view('Login');
 		}
 	}
 	
 	public function readDataUser() {
-	    //$this->load->view('user', array('data' => $this->My_Model->getDatauser()));
-//            $data = $this->My_Model->getDatauser();
-//            $this->load->view('user', array('data' => $data)); 
-            $data=$this->My_Model->getDatauser('user','','')->result_array();
-            $kirim['data']  = $data;
-            $this->load->view('user', $kirim);
+        $data=$this->My_Model->getDatauser('user','','')->result_array();
+        $kirim['data']  = $data;
+        $this->load->view('user', $kirim);
   	}
 
-  	public function create() {
-            $this->load->library('form_validation');
-            $this->form_validation->set_rules('Name', 'Nama', 'required');
-            $this->form_validation->set_rules('Email', 'Email', 'required');
-            $this->form_validation->set_rules('No_Telp', 'Telepon', 'required');
-            $this->form_validation->set_rules('Message', 'Pesan', 'required');
-	     $data = array(
-	            'Name' => $this->input->post('Name'),
-	            'Email' => $this->input->post('Email'),
-	            'No_Telp' => $this->input->post('No_Telp'),
-	            'Message' => $this->input->post('Message')         
-	            );
-             if($this->form_validation->run()){
-                 $this->My_Model->addDatauser($data);
-                redirect('/');
-//                 echo "gagal";
-             }else{
-                 echo "Format input salah!";
-             }
-    
-        }
+    public function edit($ID){
+		$where = array('id_user' => $ID);
+		$data['user'] = $this->My_Model->edit_user($where,'user')->result();
+		$this->load->view('Edit_user', $data);
+	}
+
+	public function update(){
+		$id = $this->input->post('id_user');
+		$nama = $this->input->post('nama_user');
+		$email = $this->input->post('email');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$sha1 = sha1($password);
+
+       	$data = array(
+       		'nama_user' => $nama,
+			'email' => $email,
+			'username' => $username,
+			'password' => $sha1,
+		);
+
+       	$this->session->set_userdata('username', $username);
+
+       	$where = array(
+			'id_user' => $id
+		);
+
+        $this->My_Model->UpdateUser($where,$data,'user');
+		redirect('My_Controller/readDataUser');
+		
+	}
 
   	public function deleteuser($ID){ //delete 1 user
     	$res = $this->My_Model->delete_item_user($ID);
