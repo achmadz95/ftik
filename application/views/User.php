@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Data User</title>
+    <title>Data Mahasiswa</title>
     <link href="<?php echo base_url()?>assets/admin/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/admin/css/sb-admin.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -74,7 +74,7 @@ th, td {
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <a href="#"><i class="fa fa-lg fa-comments"> Data User</i></a>
+                                <a href="#"><i class="fa fa-lg fa-comments"> Data Mahasiswa</i></a>
                             </li>
                            
                         </ol>
@@ -102,7 +102,7 @@ th, td {
                         <td><?php echo $x['deskripsi_user']; ?></td>
 
                         <td align="center">
-                            <a href="<?php echo base_url()."My_Controller/deletekomentar/".$x['id_user']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
+                            <a href="<?php echo base_url()."My_Controller/deleteuser/".$x['id_user']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Delete</button></a>
                         </td>
                         </tr>
                         <?php } ?>

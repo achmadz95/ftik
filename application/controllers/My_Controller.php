@@ -43,7 +43,7 @@ class My_Controller extends CI_Controller {
 			$this->load->view('Login');
 		}
 	}
-
+	
 	public function logout()
 	{
 //		if($this->session->userdata('username'))
@@ -53,11 +53,11 @@ class My_Controller extends CI_Controller {
         
 	
 
-	public function komentar()
+	public function user()
 	{
 		if($this->session->userdata('username'))
 		{
-			redirect('My_Controller/readDataKomentar');
+			redirect('My_Controller/readDataUser');
 		}else{
 			redirect('My_Controller/login');}}
         
@@ -68,7 +68,7 @@ class My_Controller extends CI_Controller {
 	{
 		if($this->session->userdata('username'))
 		{
-                    redirect('My_Controller/komentar');
+                    redirect('My_Controller/user');
 		}else{
                     redirect('My_Controller/login');}}
         
@@ -90,7 +90,7 @@ class My_Controller extends CI_Controller {
 	    		// $this->session->set_userdata('akses',TRUE);
 		    	$this->session->set_userdata('username', $username);
 
-		    	redirect('My_Controller/komentar');
+		    	redirect('My_Controller/user');
 	    	}
     	
             }else{
@@ -101,13 +101,13 @@ class My_Controller extends CI_Controller {
 		}
 	}
 	
-	public function readDataKomentar() {
-	    //$this->load->view('Komentar', array('data' => $this->My_Model->getDataKomentar()));
-//            $data = $this->My_Model->getDataKomentar();
-//            $this->load->view('Komentar', array('data' => $data)); 
-            $data=$this->My_Model->getDataKomentar('user','','')->result_array();
+	public function readDataUser() {
+	    //$this->load->view('user', array('data' => $this->My_Model->getDatauser()));
+//            $data = $this->My_Model->getDatauser();
+//            $this->load->view('user', array('data' => $data)); 
+            $data=$this->My_Model->getDatauser('user','','')->result_array();
             $kirim['data']  = $data;
-            $this->load->view('Komentar', $kirim);
+            $this->load->view('user', $kirim);
   	}
 
   	public function create() {
@@ -123,7 +123,7 @@ class My_Controller extends CI_Controller {
 	            'Message' => $this->input->post('Message')         
 	            );
              if($this->form_validation->run()){
-                 $this->My_Model->addDataKomentar($data);
+                 $this->My_Model->addDatauser($data);
                 redirect('/');
 //                 echo "gagal";
              }else{
@@ -132,9 +132,9 @@ class My_Controller extends CI_Controller {
     
         }
 
-  	public function deletekomentar($ID){ //delete 1 komentar
-    	$res = $this->My_Model->delete_item_komentar($ID);
-    	redirect('My_Controller/readDataKomentar');}
+  	public function deleteuser($ID){ //delete 1 user
+    	$res = $this->My_Model->delete_item_user($ID);
+    	redirect('My_Controller/readDataUser');}
   
 }
 ?>

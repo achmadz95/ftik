@@ -11,7 +11,7 @@ if ( ! function_exists('asset_url()')) {
 <html >
 <head>
 
-<title>Login Form</title>
+<title>Sign Up Form</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,31 +51,41 @@ if ( ! function_exists('asset_url()')) {
     <div class="login-screen">
       <div class="app-title">
         <a href="<?php echo base_url(""); ?>" class="navbar-brand " id="plydlogo" style="margin-left:18px;margin-top:-10px"; >Teknologi Informasi</a>
-        <br><br><h1>Login</h1>
+        <br><br><h1>Sign Up</h1>
       </div>
-<form method="post" action="<?php echo base_url()?>My_Controller/login_admin"> <!-- Login Form -->
+<form method="post" action="<?php echo base_url()?>Sign_up/create"> <!-- Signup Form -->
       <div class="login-form">
         <div class="control-group">
-        <input type="text" class="login-field" name="username" placeholder="username" id="username">
-        <label class="login-field-icon fui-user" for="login-name"></label>
+          <input type="text" class="login-field" required name="nama_user" placeholder="nama lengkap" id="nama_user">
+          <label class="login-field-icon fui-user" for="login-user"></label>
         </div>
 
         <div class="control-group">
-        <input type="password" class="login-field" name="password" placeholder="password" id="password">
-        <label class="login-field-icon fui-lock" for="login-pass"></label>
+          <input type="email" class="login-field" required name="email" placeholder="e-mail" id="email">
+          <label class="login-field-icon fui-user" for="login-email"></label>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-large btn-block">Log in</button>
+        <div class="control-group">
+          <input type="text" class="login-field" required name="username" placeholder="username" id="username">
+          <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+
+        <div class="control-group">
+          <input type="password" class="login-field" required name="password" placeholder="password" id="password">
+          <label class="login-field-icon fui-lock" for="login-pass"></label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large btn-block">Sign up</button>
       </div>
 </form>
     <div class="span7">    
-        <h4 class="title" style="margin-left:4px;margin-top:20px;"><span class="text">Don't have account?<strong>Sign up</strong></span></h4>
-          <form action="<?php echo base_url("sign_up");?>" >         
-            <div style="margin-top:-15px;"><button tabindex="9" class="btn btn-inverse large"  action="<?php echo base_url("sign_up"); ?>" >Sign up</button></div>
+        <h4 class="title" style="margin-left:4px;margin-top:20px;"><span class="text">Have an account?<strong>Log in</strong></span></h4>
+          <form action="<?php echo base_url("login");?>" >         
+            <div style="margin-top:-15px;"><button tabindex="9" class="btn btn-inverse large"  action="<?php echo base_url("login"); ?>" >Log in</button></div>
           </form>         
       </div>
-
     </div>
+
   </div>
   <script src="<?php echo base_url()?>assets/bootstrap-assets/js/jquery.js"></script>
   <script src="<?php echo base_url()?>assets/bootstrap-assets/js/bootstrap.min.js"></script>

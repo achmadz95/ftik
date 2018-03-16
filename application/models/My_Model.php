@@ -24,15 +24,15 @@ class My_Model extends CI_Model {
 //      return $this->db->get('komentar')->num_rows();
 //  }
   
-  public function addDataKomentar($data) {
-    $this->db->insert('komentar', $data);
+  public function addDataUser($data) {
+    $this->db->insert('user', $data);
   }
 
-  public function getDataKomentar($tabel) {
+  public function getDataUser($tabel) {
       return $this->db->get_where($tabel);
   }
 
-  public function delete_item_komentar($item){
+  public function delete_item_user($item){
     $this->db->where_in('id_user', $item);
     $this->db->delete('user');
   }
