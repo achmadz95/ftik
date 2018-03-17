@@ -107,7 +107,7 @@ class My_Controller extends CI_Controller {
 	public function readDataUser() {
         $data=$this->My_Model->getDatauser('user','','')->result_array();
         $kirim['data']  = $data;
-        $this->load->view('user', $kirim);
+        $this->load->view('User', $kirim);
   	}
 
     public function edit($ID){

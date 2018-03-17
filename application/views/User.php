@@ -114,43 +114,7 @@ th, td {
                         
                     </form>
             </div>
-            <!-- Modal -->
-                    <div id="myModal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <!-- konten modal-->
-                            <div class="modal-content">
-                            <!-- heading modal -->
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Edit Data</h4>
-                            </div>
-                            <!-- body modal -->
-                            <form method="POST" action="<?php echo site_url()."/Profile/edit_profil/"; ?>" enctype='multipart/form-data'>
-                            <div class="modal-body">
-                                <div class="form-group"> 
-                                    <label for="nama">Nama Lengkap</label>
-                                    <textarea style="resize:none;width: 500px;" type="text" class="form-control" id="nama" name="nama" required=""><?php echo $x['nama_user']; ?></textarea>
-                                </div>
-                                <div class="form-group"> 
-                                    <label for="alamat">E-mail</label>
-                                    <input style="width: 500px;" type="text" class="form-control" id="alamat" name="alamat" required="" value="<?php echo $x['email']; ?>">
-                                </div>
-                                <div class="form-group"> 
-                                    <label for="kecamatan">Username</label>
-                                    <input style="width: 500px;" type="text" class="form-control" id="kecamatan" name="kecamatan" required="" value="<?php echo $x['kecamatan']; ?>">
-                                </div>
-                                <div class="form-group"> 
-                                    <label for="kode_pos">Password</label>
-                                    <input style="width: 500px;" type="text" class="form-control" id="kode_pos" name="kode_pos" required="" value="<?php echo $x['kode_pos']; ?>">
-                                </div><br>
-                            </div>
-                            <!-- footer modal -->
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-default">Simpan</button>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+            
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
