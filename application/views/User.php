@@ -12,7 +12,7 @@
 	<link href="<?php echo base_url()?>assets/admin/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- logo icon -->
-    <link rel="icon" href="<?php echo base_url(); ?>uploads/icon.jpg" type="image/jpg">
+    <link rel="icon" href="<?php echo base_url(); ?>uploads/icon.png" type="image/jpg">
 
 </head>
 <style type="text/css">

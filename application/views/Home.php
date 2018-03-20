@@ -18,7 +18,7 @@
 <link href=<?php echo base_url()."assets/themes/css/flexslider.css";?> rel="stylesheet">
 
 <!-- logo icon -->
-<link rel="icon" href="<?php echo base_url(); ?>uploads/icon.jpg" type="image/jpg">
+<link rel="icon" href="<?php echo base_url(); ?>uploads/icon.png" type="image/jpg">
 
 <!-- template portfolio / gallery -->
 <link href="<?php echo base_url()?>assets/gallery/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
