@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Edit Barang</title>
+    <title>Edit User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
@@ -12,7 +12,7 @@
     <link href=<?php echo base_url()."assets/themes/css/bootstrappage.css";?> rel="stylesheet"/>
     
     <!-- logo icon -->
-    <link rel="icon" href="<?php echo base_url(); ?>assets/img/icon.png" type="image/png">
+    <link rel="icon" href="<?php echo base_url(); ?>uploads/icon.png" type="image/jpg">
 
     <!-- global styles -->
     <link href=<?php echo base_url()."assets/themes/css/main.css" ; ?> rel="stylesheet">
