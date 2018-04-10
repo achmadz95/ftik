@@ -94,7 +94,7 @@ th, td {
                     <tbody style="text-align: center;">
                         <?php foreach ($data as $x) { ?>
                         <tr>
-                        
+                            
                         <td><?php echo $x['id_user']; ?></td>
                         <td><?php echo $x['nama_user']; ?></td>
                         <td><?php echo $x['email']; ?></td>
@@ -111,6 +111,9 @@ th, td {
                     </tbody>
                 </table>
                 <br>
+                <td align="center">
+                    <a href="<?php echo base_url()."My_Controller/download/".$x['id_user']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Download Excel</button></a>
+                </td>
                         
                     </form>
             </div>
