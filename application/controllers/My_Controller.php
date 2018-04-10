@@ -34,15 +34,6 @@ class My_Controller extends CI_Controller {
 		$this->load->view('Home', $data);
 	}
 
-	public function statistik()
-	{
-		$id=$this->session->userdata('id_user');
-		$data['err_message'] = "";
-		$data['data1'] = $this->My_Model->getDataSlider(); //['data1'] sesuaikan sama view
-		$data['data2'] = $this->My_Model->getDataUser('user','','')->result_array();
-		$this->load->view('Statistik', $data);
-	}
-
 	public function login()
 	{
 		if($this->session->userdata('username')){

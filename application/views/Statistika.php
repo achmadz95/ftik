@@ -1,87 +1,66 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Highcharts Example</title>
 
-if ( ! function_exists('asset_url()')) {
-    function asset_url()
-   {
-    return base_url().'assets/';
-   }
- }
- ?>
-<!DOCTYPE html>
-<html >
-<head>
+        <style type="text/css">
+#container {
+  max-width: 800px;
+  height: 400px;
+  margin: 1em auto;
+} 
 
-<title>Login Form</title>
+        </style>
+    </head>
+    <body>
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/modules/histogram-bellcurve.js"></script>
+<div id="container"></div> 
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
-<link rel="stylesheet" href="<?php echo base_url()?>assets/css/w3.css">
-<link rel="stylesheet" href="<?php echo base_url()?>assets/bootstrap-assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo base_url()?>assets/css/full-slider.css">
-<link rel="stylesheet" href="<?php echo base_url()?>assets/polaloyd.css">
 
-<!-- global styles -->
-<link href=<?php echo base_url()."assets/themes/css/main.css" ; ?> rel="stylesheet">
-<link href=<?php echo base_url()."assets/themes/css/flexslider.css";?> rel="stylesheet">
+        <script type="text/javascript">
+var data = [3.5, 3, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.4, 3, 3, 4, 4.4, 3.9, 3.5, 3.8, 3.8, 3.4, 3.7, 3.6, 3.3, 3.4, 3, 3.4, 3.5, 3.4, 3.2, 3.1, 3.4, 4.1, 4.2, 3.1, 3.2, 3.5, 3.6, 3, 3.4, 3.5, 2.3, 3.2, 3.5, 3.8, 3, 3.8, 3.2, 3.7, 3.3, 3.2, 3.2, 3.1, 2.3, 2.8, 2.8, 3.3, 2.4, 2.9, 2.7, 2, 3, 2.2, 2.9, 2.9, 3.1, 3, 2.7, 2.2, 2.5, 3.2, 2.8, 2.5, 2.8, 2.9, 3, 2.8, 3, 2.9, 2.6, 2.4, 2.4, 2.7, 2.7, 3, 3.4, 3.1, 2.3, 3, 2.5, 2.6, 3, 2.6, 2.3, 2.7, 3, 2.9, 2.9, 2.5, 2.8, 3.3, 2.7, 3, 2.9, 3, 3, 2.5, 2.9, 2.5, 3.6, 3.2, 2.7, 3, 2.5, 2.8, 3.2, 3, 3.8, 2.6, 2.2, 3.2, 2.8, 2.8, 2.7, 3.3, 3.2, 2.8, 3, 2.8, 3, 2.8, 3.8, 2.8, 2.8, 2.6, 3, 3.4, 3.1, 3, 3.1, 3.1, 3.1, 2.7, 3.2, 3.3, 3, 2.5, 3, 3.4, 3];
 
-<!-- logo icon -->
-<link rel="icon" href="<?php echo base_url(); ?>uploads/icon.png" type="image/jpg">
+Highcharts.chart('container', {
+    title: {
+        text: 'Highcharts Histogram'
+    },
+    xAxis: [{
+        title: { text: 'Data' },
+        alignTicks: false
+    }, {
+        title: { text: 'Histogram' },
+        alignTicks: false,
+        opposite: true
+    }],
 
-<!-- template portfolio / gallery -->
-<link href="<?php echo base_url()?>assets/gallery/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo base_url()?>assets/gallery/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<!-- <link href="<?php echo base_url()?>assets/gallery/css/agency.min.css" rel="stylesheet"> -->
+    yAxis: [{
+        title: { text: 'Data' }
+    }, {
+        title: { text: 'Histogram' },
+        opposite: true
+    }],
 
-<!-- scripts -->
-<script src=<?php echo base_url()."assets/themes/js/jquery-1.7.2.min.js";?>></script>
-<script src=<?php echo base_url()."assets/bootstrap/js/bootstrap.min.js";?>></script>       
-<script src=<?php echo base_url()."assets/themes/js/superfish.js";?>></script>  
-<script src=<?php echo base_url()."assets/themes/js/jquery.scrolltotop.js";?>></script>
-
-<link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
-<!-- <link href="<?php echo base_url()?>assets/style.css" rel="stylesheet"> -->
-  
-</head>
-  <body>
-
-  <div class="login">
-    <div class="login-screen">
-      <div class="app-title">
-        <a href="<?php echo base_url(""); ?>" class="navbar-brand " id="plydlogo" style="margin-left:18px;margin-top:-10px"; >Teknologi Informasi</a>
-        <br><br><h1>Login</h1>
-      </div>
-<form method="post" action="<?php echo base_url()?>My_Controller/login_admin"> <!-- Login Form -->
-      <div class="login-form">
-        <div class="control-group">
-        <input type="text" class="login-field" name="username" placeholder="username" id="username">
-        <label class="login-field-icon fui-user" for="login-name"></label>
-        </div>
-
-        <div class="control-group">
-        <input type="password" class="login-field" name="password" placeholder="password" id="password">
-        <label class="login-field-icon fui-lock" for="login-pass"></label>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-large btn-block">Log in</button>
-      </div>
-</form>
-    <div class="span7">    
-        <h4 class="title" style="margin-left:4px;margin-top:20px;"><span class="text">Don't have account?<strong>Sign up</strong></span></h4>
-          <form action="<?php echo base_url("sign_up");?>" >         
-            <div style="margin-top:-15px;"><button tabindex="9" class="btn btn-inverse large"  action="<?php echo base_url("sign_up"); ?>" >Sign up</button></div>
-          </form>         
-      </div>
-
-    </div>
-  </div>
-  <script src="<?php echo base_url()?>assets/bootstrap-assets/js/jquery.js"></script>
-  <script src="<?php echo base_url()?>assets/bootstrap-assets/js/bootstrap.min.js"></script>
-  <script src="<?php echo base_url()?>assets/bootstrap-assets/js/bootstrap.js"></script>
-  <script src="<?php echo base_url()?>assets/gallery/vendor/jquery/jquery.min.js"></script>
-  <script src="<?php echo base_url()?>assets/gallery/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="<?php echo base_url()?>assets/themes/js/common.js"></script>
-</body>  
+    series: [{
+        name: 'Histogram',
+        type: 'histogram',
+        xAxis: 1,
+        yAxis: 1,
+        baseSeries: 's1',
+        zIndex: -1
+    }, {
+        name: 'Data',
+        type: 'scatter',
+        data: data,
+        id: 's1',
+        marker: {
+            radius: 1.5
+        }
+    }]
+});
+        </script>
+    </body>
 </html>

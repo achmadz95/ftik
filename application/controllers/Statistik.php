@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class My_Controller extends CI_Controller {
+class Statistik extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -29,9 +29,9 @@ class My_Controller extends CI_Controller {
 	{
 		$id=$this->session->userdata('id_user');
 		$data['err_message'] = "";
-		$data['data1'] = $this->My_Model->getDataSlider(); //['data1'] sesuaikan sama view
-		$data['data2'] = $this->My_Model->getDataUser('user','','')->result_array();
-		$this->load->view('Statistik');
+		// $data['data1'] = $this->My_Model->getDataSlider(); //['data1'] sesuaikan sama view
+		$data['jumlah_all'] = $this->My_Model->getDataUser('user','','')->result_array();
+		$this->load->view('Statistik',$data);
 	}
   
 }

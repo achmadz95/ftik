@@ -134,7 +134,7 @@ text-transform: none;
             	<li><a href="#visimisi" class="w3-bar-item w3-button" id="plydheaderfont">Visi & Misi</a> </li>
             	<li><a href="#mengapaTI" class="w3-bar-item w3-button"  id="plydheaderfont">Mengapa Teknologi Informasi</a></li>
             	<li><a href="#fasilitas" class="w3-bar-item w3-button"  id="plydheaderfont">Fasilitas</a></li>
-              <li><a href="My_Controller/statistik" class="w3-bar-item w3-button"  id="plydheaderfont">Statistik</a></li>
+              <li><a href="statistik" class="w3-bar-item w3-button"  id="plydheaderfont">Statistik</a></li>
             	<li><a href="login" class="w3-bar-item w3-button"  id="plydheaderfont">LOGIN</a></li>
           	</ul>
         </div>
