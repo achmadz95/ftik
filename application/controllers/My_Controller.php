@@ -138,7 +138,7 @@ class My_Controller extends CI_Controller {
 
 
 		$DB_TBLName = "user"; 
-		$filename = "report_";  //your_file_name
+		$filename = "DataMahasiswa_ftik";  //your_file_name
 		$file_ending = "xls";   //file_extention
 
 		header("Content-Type: application/xls");    
