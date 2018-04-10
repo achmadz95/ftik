@@ -138,7 +138,7 @@ class My_Controller extends CI_Controller {
 
 
 		$DB_TBLName = "user"; 
-		$filename = "excelfilename";  //your_file_name
+		$filename = "report_";  //your_file_name
 		$file_ending = "xls";   //file_extention
 
 		header("Content-Type: application/xls");    
@@ -148,7 +148,7 @@ class My_Controller extends CI_Controller {
 
 		$sep = "\t";
 
-		$sql="SELECT * FROM $DB_TBLName"; 
+		$sql="SELECT id_user,nama_user,email,username,deskripsi_user  FROM $DB_TBLName"; 
 		$resultt = $con->query($sql);
 		while ($property = mysqli_fetch_field($resultt)) { //fetch table field name
     		echo $property->name."\t";
