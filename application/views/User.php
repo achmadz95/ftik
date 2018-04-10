@@ -112,7 +112,7 @@ th, td {
                 </table>
                 <br>
                 <td align="center">
-                    <a href="<?php echo base_url()."My_Controller/download/".$x['id_user']; ?>"><button class="btn-block" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Download Excel</button></a>
+                    <a href="<?php echo base_url()."My_Controller/download/".$x['id_user']; ?>"><button class="btn btn-primary" style="border: solid 1px; margin-top: 10px; margin-bottom: 10px;">Download Excel</button></a>
                 </td>
                         
                     </form>
