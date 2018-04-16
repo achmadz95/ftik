@@ -197,7 +197,7 @@ Highcharts.chart('container', {
 
     series: [{
         name: 'User',
-        data: [<?php echo $jumlah_all['']; ?>, 2, 3]
+        data: [1, 2, 3]
     }],
 
     responsive: {
